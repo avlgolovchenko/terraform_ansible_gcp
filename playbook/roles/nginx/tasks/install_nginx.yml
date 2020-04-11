@@ -1,0 +1,9 @@
+---
+- name: update system config
+  apt: 
+    update_cache: yes
+    upgrade: yes
+- name: install nginx
+  apt:
+    name: nginx
+    state: present

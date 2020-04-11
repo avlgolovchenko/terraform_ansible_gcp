@@ -1,0 +1,11 @@
+---
+- name: upload config file
+  template:
+    src: "virthost.conf"
+    dest: "/etc/nginx/sites-available/default"
+  notify: 
+    - restart nginx
+- name: upload index.html
+  copy:
+    src: "index.html"
+    dest: "/var/www/index.html"
